@@ -19,7 +19,7 @@ For the file in File_to_replace_sitepackages/dynamic_network_architecture (unet.
 
 ## Dataset:
 Data preparation: the Dataset was copied into the nnUNet_raw folder following this structure:
-``` nnUNet/ ├──nnUNet_results | ├──nnUNet_preprocessed | ├──nnUNet_raw || ├──Dataset001_Pancreas ||| ├──imagesTr (images for training and validation data) ||| ├──imagesTs (images for test data) ||| ├──labelsTr  (masks for training and validation data)
+``` nnUNet/ ├──nnUNet_results | ├──nnUNet_preprocessed | ├──nnUNet_raw || ├──Dataset001_Pancreas ||| ├──imagesTr (images for training and validation data) ||| ├──imagesTs (images for test data) ||| ├──labelsTr  (masks for training and validation data) ```
 
 Create an excel file of the data in /imagesTr in this format:  filename    subtype    split
 Or use the classification_label.csv file in this repository (inside the Data_prep folder)
