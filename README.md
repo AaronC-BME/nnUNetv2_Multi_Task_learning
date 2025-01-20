@@ -11,27 +11,20 @@ After initial nnUNetv2 framework installation, you can download the folders: Fil
 ### Setting up the environment
 After downloading those folders, you need to add or replace the content of the folder to the correct directory. Where to add/replace the files is match the same directory to how nnUNetv2 framework is structured.
 For instance,
-The file for data_loader_3d.py is in "File to replace_nnunetv2" in this directory: File to replace_nnunetv2/training/dataloading
-Which should replace the same filename that is in the nnUNetv2 framework: nnunetv2/training/dataloading
+The file for data_loader_3d.py is in "File to replace_nnunetv2" in this directory: ``` File to replace_nnunetv2/training/dataloading ```
+Which should replace the same filename that is in the nnUNetv2 framework: ``` nnunetv2/training/dataloading ```
 
 For the file in File_to_replace_sitepackages/dynamic_network_architecture (unet.py), that file should replace in the directory of your environment
-envs/<environment which you run nnUNetv2>/Lib/site-packages/dynamic_network_architecture/architecture
+``` envs/<environment which you run nnUNetv2>/Lib/site-packages/dynamic_network_architecture/architecture ```
 
 ## Dataset:
 Data preparation: the Dataset was copied into the nnUNet_raw folder following this structure:
-nnUNet
-|--nnUNet_results
-|--nnUNet_preprocessed
-|--nnUNet_raw
-  |--Dataset001_Pancreas
-      |--imagesTr (images for training and validation data)
-      |--imagesTs (images for test data)
-      |--labelsTr  (masks for training and validation data)
+``` nnUNet/ ├──nnUNet_results | ├──nnUNet_preprocessed | ├──nnUNet_raw || ├──Dataset001_Pancreas ||| ├──imagesTr (images for training and validation data) ||| ├──imagesTs (images for test data) ||| ├──labelsTr  (masks for training and validation data)
 
 Create an excel file of the data in /imagesTr in this format:  filename    subtype    split
 Or use the classification_label.csv file in this repository (inside the Data_prep folder)
 
-Use the notebook "Creating_metadata.ipynb" to create the metadata needed for preprocesssing
+Use the notebook ```Creating_metadata.ipynb``` to create the metadata needed for preprocesssing
 
 ## Preprocessing
 Preprocessing was completed by using the nnUNetv2_plan_and_preprocess command
@@ -42,7 +35,7 @@ Preprocessing steps include:
 •	Cropping non-zero regions for efficient computation.
 
 Run the command in the nnUNetv2 environment for data preprocessing:
-nnUNetv2_plan_and_preprocess -d 1 --verify_dataset_integrity
+``` nnUNetv2_plan_and_preprocess -d 1 --verify_dataset_integrity ```
 
 ## Training
 Before training start, the split_final.json need to be modified to explicitly split training and validation data
