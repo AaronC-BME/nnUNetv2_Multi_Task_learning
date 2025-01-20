@@ -5,14 +5,14 @@ This report describes the development of a multi-task deep learning model for pa
 
 ## Environments and Requirements
 
-For detailed environment and requirements, refer to the official nnU-Net documentation: Installation Instructions.
+For detailed environment and requirements, refer to the official nnU-Net documentation: [Installation Instructions](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md).
 After initial nnUNetv2 framework installation, you can download the folders: Files to add_nnunetv2, Files to replace_nnunetv2 and File_to_replace_sitepackages/dynamic_network_architecture
 
 ### Setting up the environment
-After downloading those folders, you need to add or replace the content of the folder to the correct directory. Where to add/replace the files is match the same directory to how nnUNetv2 framework is structured.
+After downloading those folders, you need to add or replace the content of the folders to the correct directory. Where to add/replace the files matches the same directory to how nnUNetv2 framework is structured.
 For instance,
 The file for data_loader_3d.py is in "File to replace_nnunetv2" in this directory: ``` File to replace_nnunetv2/training/dataloading ```
-Which should replace the same filename that is in the nnUNetv2 framework: ``` nnunetv2/training/dataloading ```
+Which should replace the same filename that is in the nnUNetv2 framework: ``` .../nnunetv2/training/dataloading ```
 
 For the file in File_to_replace_sitepackages/dynamic_network_architecture (unet.py), that file should replace in the directory of your environment
 ``` envs/<environment which you run nnUNetv2>/Lib/site-packages/dynamic_network_architecture/architecture ```
